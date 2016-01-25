@@ -31,33 +31,59 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="http://lesbricodeurs.fr">About</a></li>
+          <li><a href="mailto:xavier@bricodeur.com">Contact</a></li>
         </ul>
-        <h3 class="text-muted">testsd3js</h3>
+        <h3 class="text-muted">Learning D3.js</h3>
       </div>
 
       <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+        <h1>D3 js. learning</h1>
+        <p class="lead">Interactive Data Visualization for the Web</p>
+        <p><a class="btn btn-lg btn-success" href="http://chimera.labs.oreilly.com/books/1230000000345/index.html">See the source!</a></p>
       </div>
 
-      <div class="row marketing">
+      <section class="row marketing">
+        <div class="col-md-6">
 
-<svg width="50" height="50">
-  <circle cx="25" cy="25" r="25"/>
+          <svg width="250" height="250">
 
-  <circle cx="50" cy="50" r="22"
- fill="yellow" stroke="orange" stroke-width="5"/>
+            <circle cx="125" cy="125" r="125" fill="#444"/>
 
-</svg>
+            <circle cx="250" cy="250" r="120"
+           fill="yellow" stroke="orange" stroke-width="5"/>
+
+           <circle cx="250" cy="0" r="99" fill="rgba(128, 0, 128, 0.75)"
+                  stroke="rgba(0, 255, 0, 0.25)" stroke-width="40" opacity="0.2" />
+
+          </svg>
+        </div>
+        <div class="col-md-6">
+          <H3>To load data</H3> 
+          <p>d3.json(), d3.csv, d3.tsv</p>
+          <p>check for errors:<br/>
+          d3.json("file", function(error, data {
+          callback function, check for error});</p>
+          <pre>
+    d3.select("body").selectAll("p")
+        .data(dataset)
+        .enter()
+        .append("p")
+        .text("New paragraph!");
+          </pre>
+
+        </div>
 
 
-      </div>
+      </section> <!-- row -->
+      
+      <section class="row">
+        
+
+      </section>
 
       <div class="footer">
-        <p>♥ from the Yeoman team</p>
+        <p>♥ from <a href="http://xalava.github.io">Xa</a></p>
       </div>
     </div>
     
@@ -74,6 +100,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
